@@ -1,0 +1,23 @@
+server:
+  port: 8084
+
+spring:
+  dubbo:
+    application:
+      name: consumer
+    registry:
+      address: zookeeper://127.0.0.1:2181
+      check: false
+    scan: com.rrww.dubboconsumer.Controller
+    consumer:
+      check: false
+    protocol:
+      host: 127.0.0.1
+      check: false
+    reference:
+      check: false
+#      interface: com.rrww.dubboserver.Service
+
+logging:
+  level:
+    com.rrww.dubboconsumer.Controller: error
